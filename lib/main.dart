@@ -1,3 +1,4 @@
+import 'package:chat_gpt/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chat GPT',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: scaffoldBackgroundColor,
+        appBarTheme: AppBarTheme(
+          color: cardColor
+        )
       ),
       home: null,
     );
