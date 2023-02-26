@@ -1,4 +1,6 @@
+import 'package:chat_gpt/constants/constants.dart';
 import 'package:chat_gpt/services/assets_manager.dart';
+import 'package:chat_gpt/widgets/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -40,8 +42,7 @@ class _ChatScreenState extends State<ChatScreen> {
           title: const Text("ChatGPT"),
           actions: [
             IconButton(
-              onPressed: () async {
-              },
+              onPressed: () async {},
               icon: const Icon(Icons.more_vert_rounded, color: Colors.white),
             ),
           ],
@@ -53,7 +54,12 @@ class _ChatScreenState extends State<ChatScreen> {
                 child: ListView.builder(
                   itemCount: 6,
                   itemBuilder: (ctx, index) {
-                    return const Text("hello GPt");
+                    return const ChatCard(
+                        msg: "Hello Boot"
+                            "fwefewfwefwefewfewfwef ewfewfef"
+                            "wef  efef  efefwefwefwffewfweff"
+                            "wefwefwefwfwef wfwfff  f wf  wf",
+                        chatIndex: 1);
                   },
                 ),
               ),
@@ -68,12 +74,13 @@ class _ChatScreenState extends State<ChatScreen> {
                   Expanded(
                     child: TextField(
                       focusNode: focusNode,
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
                       controller: textEditingController,
                       onSubmitted: (value) {},
                       decoration: const InputDecoration.collapsed(
                           hintText: "How can I help you",
-                          hintStyle: TextStyle(color: Colors.grey)),
+                          hintStyle:
+                              TextStyle(color: Colors.grey, fontSize: 20)),
                     ),
                   ),
                   IconButton(
@@ -81,6 +88,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       icon: const Icon(
                         Icons.send,
                         color: Colors.white,
+                        size: 40,
                       ))
                 ],
               )
