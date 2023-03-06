@@ -1,3 +1,4 @@
+import 'package:chat_gpt/widgets/drop_down.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
@@ -25,7 +26,7 @@ class Services {
                     fontSize: 16,
                   ),
                 ),
-                // Flexible(flex: 2, child: ModelsDrowDownWidget()),
+                Flexible(flex: 2, child: ModelsDropDown()),
               ],
             ),
           );
