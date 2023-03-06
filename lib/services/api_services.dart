@@ -11,8 +11,8 @@ class ApiService {
   static Future<List<ModelsModel>> getModels() async {
     try {
       var response = await http.get(
-        Uri.parse("https://api.openai.com/v1/models"),
-        headers: {'Authorization': 'Bearer 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'},
+        Uri.parse("$BASE_URL/models"),
+        headers: {'Authorization': 'Bearer $API_KEY'},
       );
 
       print(response.body);
